@@ -351,7 +351,7 @@ Module.todo.push([() => {
 Module.todo.push([() => {
     Module.status = "FETCH";
     // fetch necessary info and build
-    return [fetch(`${CDN}build_${BUILD}.wasm.wasm`).then(res => res.arrayBuffer()), fetch(`${API_URL}servers`).then(res => res.json()), fetch(`${API_URL}tanks`).then(res => res.json())];
+    return [PrivateWasm.fetch(`${CDN}build_${BUILD}.wasm.wasm`), fetch(`${API_URL}servers`).then(res => res.json()), fetch(`${API_URL}tanks`).then(res => res.json())];
 }, true]);
 
 Module.todo.push([(dependency, servers, tanks) => {

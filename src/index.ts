@@ -73,6 +73,10 @@ const server = http.createServer((req, res) => {
                 file = config.clientLocation + "/index.html";
                 contentType = "text/html";
                 break;
+            case "/wasm-fetch.js":
+                file = config.clientLocation + "/wasm-fetch.js";
+                contentType = "application/javascript";
+                break;
             case "/loader.js":
                 file = config.clientLocation + "/loader.js";
                 contentType = "application/javascript";
